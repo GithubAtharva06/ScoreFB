@@ -1,0 +1,274 @@
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    overflow-x: hidden;
+}
+
+.ffont {
+    font-weight: 900;
+    font-size: 101%;
+}
+
+.inner-nav {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3vw;
+    margin-right: 33vw;
+}
+
+.soccer-video {
+    width: 400vw;
+    z-index: -1000;
+    height: 200vh;
+    
+}
+.over-video{
+    position: relative;
+    top: -80vh;
+    left: 5vw;
+    z-index: 1000;
+    width: 30vw;
+    font-size: larger;
+}
+.black-bar{
+    background-color: rgba(0, 0, 0, 0.603);
+    width: 100vw;
+    padding-left: 10vw;
+    margin-left: -10vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(10px) saturate(0%);
+    border: 1px solid black;
+
+    
+}
+.vsection{
+z-index: -1000;
+
+}
+
+.ScoreFBhead {
+    color: white;
+    z-index: 1000;
+}
+.aboutFB{
+    color: white;
+    z-index: 1000;
+}
+
+/* h1 {
+    color: white;
+} */
+
+
+header,nav {
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.233);
+    backdrop-filter: blur(10px) saturate(0%);
+    padding: 0.5vw;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.full-section {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width:100vw;
+   height: 100vh;
+   padding: 0%;
+}
+
+header {
+padding: 0vw;
+border-bottom: 2px solid white;
+margin: 0%;
+position:relative;
+top: -1vw;
+left: -1vw;
+width: 100vw;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3vw;
+    padding-left: 2vw;
+    margin: 0%;
+}
+
+.vsection {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*overflow: hidden;*/
+    position: fixed;
+    top: 0vw;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*hwshadhqwhqgwuqsadbajsdiabsdhausgdahdiuagdhahsuidasdvadfiuasgduafsdugasyudfaiusdgayudiuagdhavduahgdiuaoidga*/
+/* body { */
+    
+    /* display: flex;
+    flex-direction: column;
+    margin: 0%;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-top: 2vw;
+    padding-bottom: 10vh; */
+/* } */
+
+section {
+    
+    height: 150vh;
+    margin: 0px;
+    width: 80vw;
+    display: grid;
+    grid-template-areas:
+    "a b"
+    "c d"
+    "e f"
+    "g h"
+    "i j"
+    "k l"
+    "m n"
+    "o p"
+    "q r";
+
+}
+
+.upcoming{
+    position: relative;
+    align-self: center;
+    top: -97vh;
+    left: 10vw;
+    
+}
+
+.upcoming1{
+    position: relative;
+    align-self: center;
+    top: -97vh;
+    
+}
+
+td { 
+    color:white;
+    text-align: center;
+    background-color: #00000075;
+    
+}
+
+tr{
+    background-color: rgba(255, 255, 255, 0);
+    
+}
+
+.tableh{
+    color:white;
+    text-align: center;
+    background-color: #423b3b;
+}
+
+
+.a{grid-area: a;}
+.b{grid-area: b;}
+.c{grid-area: c;}
+.d{grid-area: d;}
+.e{grid-area: e;}
+.f{grid-area: f;}
+.g{grid-area: g;}
+.h{grid-area: h;}
+.i{grid-area: i;}
+.j{grid-area: j;}
+.k{grid-area: k;}
+.l{grid-area: l;}
+.m{grid-area: m;}
+.n{grid-area: n;}
+.o{grid-area: o;}
+.p{grid-area: p;}
+.q{grid-area: q;}
+.r{grid-area: r;}
+
+td:hover {
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+table {
+    margin: 0.5vw;
+    background-color: rgba(0, 0, 0, 0);
+    height: 20vh;
+    backdrop-filter: blur(10px) saturate(0%);
+
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h3{
+    
+    background-color: rgba(0, 0, 0, 0.514);
+    backdrop-filter: blur(10px) saturate(0%);
+    color: white;
+    text-align: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    width: 110vw;
+    position: relative;
+    left: -1vw;
+    top:0px;
+}
+
+
+.click1{
+    text-decoration: none;
+    color: rgb(96, 111, 10);
+
+}
+
+@media only screen and (max-width:700px) {
+   section {
+    background-color: rgba(0, 0, 255, 0);
+    height: 80vh;
+    margin: 0px;
+    display: grid;
+    grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "e"
+    "f";
+    gap: 2vh;
+}
+}

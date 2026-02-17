@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="\static\styles.css">
+    <style>
+        .blog-container {
+            display: flex;
+            gap: 2vh;
+            padding: 1rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .post {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 1rem;
+            background: #111111b3;
+            color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.0);
+            padding: 1rem;
+            backdrop-filter: blur(5px);
+            border: 1px solid #000000; 
+            transform: scale(0.90);
+            transition: all 0.3s ease-in-out;
+            width: 80vw;
+            
+        }
+
+        .post:hover {
+            background: #111111c9;
+            backdrop-filter: blur(10px) saturate(0%);
+            border: 3px solid #e3e3e3; 
+            transform: scale(1.03);
+            transition: all 0.3s ease-in-out;
+            width: 80vw;
+            
+        }
+
+        .post img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .post-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .post-content h2 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .post-content h2 a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .post-content h2 a:hover {
+            text-decoration: underline;
+        }
+
+        .post-content p {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .excerpt {
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+            color: #ddd;
+        }
+
+        hr {
+            display: none;
+        }
+
+        @media(max-width: 768px) {
+            .post {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1 class="ffont">ScoreFootball</h1>
+            </div>
+            <div class="inner-nav">
+                <a href="/">Home</a>
+                <a href="/blog">News</a>
+                <a href="/news">Games</a>
+                <!-- <a href="/games">Games</a> -->
+                <a href="/about">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>ScoreFootball - News</h1>
+        <div class="blog-container">
+          {% for p in posts[:60] %}
+            <article class="post">
+              <div class="post-image">
+                {% if p.media_content %}
+                    <img src="{{ p.media_content[0]['url'] }}" alt="Post image">
+                {% else %}
+                    <img src="/static/assests/ball.png" alt="blog image post" style="width: 80%; height: auto;">
+                {% endif %}
+              </div>
+              <div class="post-content">
+                <h2><a href="{{ p.link }}" target="_blank" rel="noopener">{{ p.title }}</a></h2>
+                <p><em>{{ p.author }} — {{ p.published }}</em></p>
+                <div class="excerpt">{{ p.summary|safe }}</div>
+              </div>
+            </article>
+          {% else %}
+            <p>No posts found.</p>
+          {% endfor %}
+        </div>
+    </main>
+     <main class="full-section">
+        <div class="vsection">
+            <video src="static/assests/slomofb.mp4" autoplay muted loop class="soccer-video">
+            </video>
+        </div>
+     </main>
+
+</body>
+</html>
